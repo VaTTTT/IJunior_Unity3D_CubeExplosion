@@ -6,7 +6,7 @@ public class CubeSplitter : MonoBehaviour
     [SerializeField] private int _particlesMaximalNumber = 4;
     [SerializeField] private Cube _particlePrefab;
     [SerializeField] private float _particleScale = 0.5f;
-    [SerializeField] CubeDetonator _cubeDetonator;
+    [SerializeField] private CubeDetonator _cubeDetonator;
 
     private int _chanceValue;
     private int _randomValue;
