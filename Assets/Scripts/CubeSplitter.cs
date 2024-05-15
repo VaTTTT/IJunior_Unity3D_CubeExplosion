@@ -31,7 +31,7 @@ public class CubeSplitter : MonoBehaviour
     {
         _particlesNumber = Random.Range(_particlesMinimalNumber, _particlesMaximalNumber + 1);
         _randomValue = Random.Range(0, _chanceValue);
-        
+
         if (_cube.SplitChance >= _randomValue)
         {
             for (int i = 0; i < _particlesNumber; i++)
@@ -42,7 +42,11 @@ public class CubeSplitter : MonoBehaviour
                 newParticle.SetParameters(_particleColor, _particleScale, _cube.SplitChance / _splitValue);
             }
         }
+        else
+        {
+            _cubeDetonator.Detonate();
+        }
 
-        _cubeDetonator.Detonate();
+        Destroy(gameObject);
     }
 }
